@@ -15,5 +15,5 @@
 </div>
 
 <div class="action-links">
-<p>@Html.ActionLink("Back to Stylist", "Details", "Stylists") | @Html.ActionLink("Update Information", "Edit", new { id = Model.ClientID}) | @Html.ActionLink("Remove Client", "Delete", new { id = Model.StylistID})</p>
+<p>@Html.ActionLink("Back to Stylist", "Details", "Stylists", new { id = Model.StylistID}) | @Html.ActionLink("Update Information", "Edit", new { id = Model.ClientID}) | @Html.ActionLink("Remove Client", "Delete", new { id = Model.ClientID})</p>
 </div>

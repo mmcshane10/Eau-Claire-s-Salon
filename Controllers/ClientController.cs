@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace HairSalon.Controllers
 {
@@ -38,5 +39,23 @@ namespace HairSalon.Controllers
             Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientID == id);
             return View(thisClient);
         }
+
+        public ActionResult Edit(int id)
+        {
+            var thisClient = _db.Clients.FirstOrDefault(client => client.ClientID == id);
+            ViewBag.StylistId = new SelectList(_db.Stylists, "StylistID", "Name");
+            return View(thisClient);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Client client)
+        {
+            _db.Entry(client).State = EntityState.Modified;
+            _db.SaveChanges();
+            int id = client.StylistID;
+            return RedirectToAction("Details", "Stylists", new { id });
+        }
+
+        
     }
 }
