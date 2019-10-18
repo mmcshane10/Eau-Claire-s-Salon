@@ -8,6 +8,7 @@
 <h2>Stylist Information</h2>
 
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>Client List:</h3>
 
 @if (@Model.Clients.Count == 0)
 {
@@ -20,6 +21,10 @@
     <hr>
 }
 
+<div class="button-wrap">
 <a href="/clients/create"><button class="btn" type="click" name="button">Add New Client</button></a>
+</div>
 
+<div class="action-links">
 <p>@Html.ActionLink("Back to list", "Index") | @Html.ActionLink("Update Information", "Edit", new { id = Model.StylistID}) | @Html.ActionLink("Remove Stylist", "Delete", new { id = Model.StylistID})</p>
+</div>

@@ -8,6 +8,8 @@
 {
 background-color: rgba(250, 235, 215, 0.25);
 border-radius: 10px;
+margin-top: 25px;
+margin-bottom: 25px;
 }
 
 #main-title
@@ -40,4 +42,23 @@ p
 button
 {
     color: #ff0000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.action-links
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button-wrap
+{
+    margin-bottom: 10px;
+}
+
+.client-info h5
+{
+    color: #ff0000;
+    text-shadow: 2px 2px 2px #443737;
 }
