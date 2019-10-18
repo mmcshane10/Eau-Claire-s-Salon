@@ -56,6 +56,22 @@ namespace HairSalon.Controllers
             return RedirectToAction("Details", "Stylists", new { id });
         }
 
+        public ActionResult Delete(int id)
+        {
+            Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientID == id);
+            return View(thisClient);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientID == id);
+            _db.Clients.Remove(thisClient);
+            id = thisClient.StylistID;
+            _db.SaveChanges();
+            return RedirectToAction("Details", "Stylists", new { id });
+        }
+
         
     }
 }
