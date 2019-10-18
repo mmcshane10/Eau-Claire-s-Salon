@@ -12,5 +12,15 @@
     <div class="container">
     @RenderBody()
     </div>
+    <div class="container">
+      <div class="well" id="search-well">
+        @using (Html.BeginForm())
+          {
+            <label>Find A Client:</label>
+            <input type="text" name="Search"/>
+            <input type="submit" value="Search"/>
+          }
+      </div>
+    </div>
   </body>
 </html>

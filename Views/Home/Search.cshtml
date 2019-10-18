@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+@model HairSalon.Models.Client;
+
+<h1>Search Results</h1>
+
+    <li>@Html.ActionLink($"{Model.Name}", "Details", "Clients", new { id = Model.ClientID })</li>
+
+<p>@Html.ActionLink("Back", "Index")</p>
