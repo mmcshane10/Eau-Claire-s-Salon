@@ -63,3 +63,15 @@ button
     color: #ff0000;
     text-shadow: 2px 2px 2px #443737;
 }
+
+.well
+{
+    background: none;
+}
+
+.well h5 a
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: antiquewhite;
+}

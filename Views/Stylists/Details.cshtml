@@ -17,8 +17,9 @@
 
 @foreach (Client client in Model.Clients)
 {
+    <div class="well">
     <h5>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientID })</h5>
-    <hr>
+    </div>
 }
 
 <div class="button-wrap">
