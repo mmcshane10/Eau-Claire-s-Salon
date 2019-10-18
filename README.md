@@ -1,6 +1,6 @@
 # _Eau Claire's Salon_
 
-#### _An expansion of my previous EpiDOUGHdus console app using the MVC structure; 18-October-2019_
+#### _AAn MVC web application to help Claire manage her employees (stylists) and their clients; 18-October-2019_
 
 #### By _**Mike McShane**_
 
