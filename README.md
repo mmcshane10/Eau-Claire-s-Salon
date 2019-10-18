@@ -29,7 +29,7 @@ _An MVC web application to help Claire manage her employees (stylists) and their
 
 ## Known Bugs
 
-_N/A_
+_Search function does not currently return found clients_
 
 ## Support and contact details
 
