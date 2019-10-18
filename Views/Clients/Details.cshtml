@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+@using System.Linq;
+@model HairSalon.Models.Client;
+
+<h2>Client Information</h2>
+<hr/>
+<h5>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h>
+<h5>@Html.DisplayNameFor(model => model.Age): @Html.DisplayFor(model => model.Age)</h5>
+<h5>@Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(model => model.Number)</h5>
